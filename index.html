@@ -15,28 +15,38 @@
         <h1>CodeJam - Palette</h1>
         <img src="./img/menu icon.png" alt="menu">
     </header>
-    <aside>
-        <div class="top-menu">
-            <ul class="border-bottom">
-                <li><img src="./img/paint.png" alt="paint"> Paint bucket</li>
-                <li><img src="./img/pip.png" alt="Choose"> Choose color</li>
-            </ul>
-            <ul>
-                <li><img src="./img/moove.png" alt="moove"> Move</li>
-                <li><img src="./img/transform.png" alt="transform"> Transform</li>
-            </ul>
+    <main>
+        <aside>
+            <div class="top-menu">
+                <ul class="border-bottom">
+                    <li><img src="./img/paint.png" alt="paint"> Paint bucket</li>
+                    <li><img src="./img/pip.png" alt="Choose"> Choose color</li>
+                </ul>
+                <ul>
+                    <li><img src="./img/moove.png" alt="moove"> Move</li>
+                    <li><img src="./img/transform.png" alt="transform"> Transform</li>
+                </ul>
+            </div>
+            <div class="colors">
+                <ul class="border-bottom">
+                    <li><span></span>Current color</li>
+                    <li><span></span>Prev color</li>
+                </ul>
+                <ul>
+                    <li><span></span>red</li>
+                    <li><span></span>blue</li>
+                </ul>
+            </div>
+        </aside>
+        <div class="canvas">
+            <canvas id="canvas" width="512" height="512"></canvas>
         </div>
-        <div class="colors">
-            <ul class="border-bottom">
-                <li><span></span>Current color</li>
-                <li><span></span>Prev color</li>
-            </ul>
-            <ul>
-                <li><span></span>red</li>
-                <li><span></span>blue</li>
-            </ul>
+        <div class="images">
+
         </div>
-    </aside>
+    </main>
+    <script src="./canvas.js"></script>
+
 </body>
 
 </html>
