@@ -13,12 +13,61 @@ h1 {
     display: inline-block;
     width: 88%;
 }
-span {
+header span {
     margin: 0 25px 0 40px;
     font-size: 1.5em;
     cursor: pointer;
 }
-img {
+header img {
     vertical-align: middle;
     cursor: pointer;
+}
+
+aside {
+    color: rgba(0, 0, 0, 0.541327);
+    width: 25%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.top-menu, .colors {
+    border: 1px solid #ccc;
+    width: 80%;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 7px #ccc;
+}
+.border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+aside ul li {
+    text-indent: 20px;
+    list-style: none;
+    line-height: 3em;
+    cursor: pointer;
+}
+aside ul li img, aside ul li span {
+    margin-right: 20px;
+}
+aside .colors span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000;
+    vertical-align: middle;
+}
+aside .colors ul:nth-of-type(1) li:nth-of-type(1) span {
+    background-color: #ccc;
+}
+aside .colors li:nth-of-type(2) span {
+    background-color: #41F795;
+}
+aside .colors ul:nth-of-type(2) li:nth-of-type(1) span {
+    background-color: #F74141;
+}
+aside .colors ul:nth-of-type(2) li:nth-of-type(2) span {
+    background-color: #41B6F7;
 }
