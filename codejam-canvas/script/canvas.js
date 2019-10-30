@@ -1,12 +1,9 @@
-var canvas = document.querySelector('#canvas');
+const canvas = document.querySelector('#canvas');
 const ctx = canvas.getContext('2d');
 
-const frame4x4 = document.getElementById('4x4');
-const frame32x32 = document.getElementById('32x32');
-const erase = document.getElementById('erase');
-const rs = document.getElementById('rs');
 const img = document.createElement('img');
-                img.src = './img/image.png';
+img.src = './img/image.png';
+const choice = document.querySelector('.choice ul');
 
 
 function drawPic(frame, size, getColor) {
@@ -22,22 +19,19 @@ function drawPic(frame, size, getColor) {
 
 }
 
-frame4x4.addEventListener('click', () => {
-    drawPic(frame4, 128, function (color) {
-        return '#' + color;
-    })
-})
-
-frame32x32.addEventListener('click', () => {
-    drawPic(frame32, 16, function(color) {
-        return 'rgba(' + color + ')';
-    })
-})
-
-erase.addEventListener('click', () => {
-    ctx.clearRect(0, 0, 512, 512);
-})
-
-rs.addEventListener('click', () => {
-    ctx.drawImage(img, 0, 0, 512, 512);
-})
+choice.onclick = function (event) {
+    const target = event.target;
+    if (target.dataset.pic === '4x4') {
+        drawPic(frame4, 128, function (color) {
+            return '#' + color;
+        })
+    } else if (target.dataset.pic === '32x32') {
+        drawPic(frame32, 16, function(color) {
+            return 'rgba(' + color + ')';
+        })
+    } else if (target.dataset.pic === 'rs') {
+        ctx.drawImage(img, 0, 0, 512, 512);
+    } else if (target.dataset.pic === 'erase') {
+        ctx.clearRect(0, 0, 512, 512);
+    }
+};

@@ -61,11 +61,15 @@ aside ul li {
     line-height: 3em;
     cursor: pointer;
 }
-aside ul li img, aside ul li span {
+aside ul li img {
     margin-right: 20px;
     vertical-align: middle;
 }
-aside .colors span {
+aside ul li::before {
+    margin-right: 20px;
+}
+aside .colors li::before {
+    content: '';
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -74,16 +78,16 @@ aside .colors span {
     border: 1px solid #000;
     vertical-align: middle;
 }
-aside .colors ul:nth-of-type(1) li:nth-of-type(1) span {
+aside .colors ul:nth-of-type(1) li:nth-of-type(1)::before {
     background-color: rgb(204, 204, 204);
 }
-aside .colors li:nth-of-type(2) span {
+aside .colors li:nth-of-type(2)::before {
     background-color: #41F795;
 }
-aside .colors ul:nth-of-type(2) li:nth-of-type(1) span {
+aside .colors ul:nth-of-type(2) li:nth-of-type(1)::before {
     background-color: #F74141;
 }
-aside .colors ul:nth-of-type(2) li:nth-of-type(2) span {
+aside .colors ul:nth-of-type(2) li:nth-of-type(2)::before {
     background-color: #41B6F7;
 }
 
