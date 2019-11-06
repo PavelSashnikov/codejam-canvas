@@ -19,19 +19,27 @@ function drawPic(frame, size, getColor) {
 
 }
 
-choice.onclick = function (event) {
-    const target = event.target;
-    if (target.dataset.pic === '4x4') {
-        drawPic(frame4, 128, function (color) {
-            return '#' + color;
-        })
-    } else if (target.dataset.pic === '32x32') {
-        drawPic(frame32, 16, function(color) {
-            return 'rgba(' + color + ')';
-        })
-    } else if (target.dataset.pic === 'rs') {
-        ctx.drawImage(img, 0, 0, 512, 512);
-    } else if (target.dataset.pic === 'erase') {
-        ctx.clearRect(0, 0, 512, 512);
+choice.addEventListener('click', (event) => {
+
+    switch (event.target.dataset.pic) {
+        case '4x4':
+            drawPic(frame4, 128, function (color) {
+                return '#' + color;
+            });
+            break;
+        case '32x32':
+            drawPic(frame32, 16, function (color) {
+                return 'rgba(' + color + ')';
+            });
+            break;
+        case 'rs':
+            ctx.drawImage(img, 0, 0, 512, 512);
+            break;
+        case 'erase':
+            ctx.clearRect(0, 0, 512, 512);
+            break;
+        default:
+            break;
     }
-};
+    
+});
