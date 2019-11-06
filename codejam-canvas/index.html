@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>canvas</title>
+</head>
+
+<body>
+    <header>
+        <span>&equiv;</span>
+        <h1>CodeJam - Palette</h1>
+        <img src="./img/menu icon.png" alt="menu">
+    </header>
+    <main>
+        <aside>
+            <div class="top-menu">
+                <ul class="border-bottom">
+                    <li><img src="./img/paint.png" alt="paint"> Paint bucket</li>
+                    <li><img src="./img/pip.png" alt="Choose"> Choose color</li>
+                </ul>
+                <ul>
+                    <li><img src="./img/moove.png" alt="moove"> Move</li>
+                    <li><img src="./img/transform.png" alt="transform"> Transform</li>
+                </ul>
+            </div>
+            <div class="colors">
+                <ul class="border-bottom">
+                    <li>Current color</li>
+                    <li>Prev color</li>
+                </ul>
+                <ul>
+                    <li>red</li>
+                    <li>blue</li>
+                </ul>
+            </div>
+        </aside>
+        <div class="canvas">
+            <canvas id="canvas" width="512" height="512"></canvas>
+        </div>
+        <div class="choice">
+            <ul>
+                <li data-pic="4x4">4x4</li>
+                <li data-pic="32x32">32x32</li>
+                <li data-pic="rs">Image</li>
+                <li data-pic="erase">Erase</li>
+            </ul>
+        </div>
+    </main>
+    <script src="./script/32x32.js"></script>
+    <script src="./script/4x4.js"></script>
+    <script src="./script/canvas.js"></script>
+
+</body>
+
+</html>
